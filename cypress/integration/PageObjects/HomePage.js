@@ -1,0 +1,36 @@
+class HomePage
+{
+    getUrl()
+       {
+         return cy.visit('https://rahulshettyacademy.com/angularpractice')
+       }
+   getNameEditBox()
+       {
+         return cy.get('input[name="name"]:nth-child(2)')
+       }
+
+   getTwoWayDataBinding()
+       {
+        return cy.get(':nth-child(4) > .ng-untouched')
+       }
+
+   getGender()
+       {
+        return cy.get('#exampleFormControlSelect1')
+       } 
+
+    getEntrepreneur()
+       {
+        return cy.get('#inlineRadio3')
+       }    
+   
+    getShopTab()
+       {
+        return cy.get(':nth-child(2) > .nav-link')
+       }   
+
+
+
+}
+
+export default HomePage;

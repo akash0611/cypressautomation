@@ -1,0 +1,6 @@
+{
+  "name": "bob",
+  "gender": "Male",
+  "product":"Blackberry",
+  "productname":["iphone X","Samsung Note 8"] 
+}

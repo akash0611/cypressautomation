@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-11T07:07:58.145Z",
+    "end": "2022-07-11T07:08:03.408Z",
+    "duration": 5263,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "92cfc304-7111-476d-b94c-15bc2721fd95",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Test2.js",
+      "file": "cypress/integration/examples/Test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eb26be48-5799-4fc7-8dde-9dad5df42266",
+          "title": "End to End Product Purchasing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EtoE",
+              "fullTitle": "End to End Product Purchasing EtoE",
+              "timedOut": null,
+              "duration": 4134,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// it open\ncy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.products').as('productslocator');\ncy.get('.products').find('.product').each(($el, index, $list) => {\n  // each open\n  const textveg = $el.find('h4.product-name').text();\n  if (textveg.includes('Cashews')) {\n    cy.wrap($el).contains('ADD TO CART').click(); // or cy.wrap($el).find('button').click()\n  }\n}); // each close\ncy.get('.cart-icon > img').click();\ncy.contains('PROCEED TO CHECKOUT').click();\ncy.contains('Place Order').click();",
+              "err": {},
+              "uuid": "ebaf5a10-8412-4aad-a7e9-93f4b55ceb8f",
+              "parentUUID": "eb26be48-5799-4fc7-8dde-9dad5df42266",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebaf5a10-8412-4aad-a7e9-93f4b55ceb8f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4134,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
